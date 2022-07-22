@@ -1,0 +1,55 @@
+﻿@model StonesShop.Models.Order
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Order</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.DateTimeOrdered)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DateTimeOrdered)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Pickup)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Pickup)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Comments)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Comments)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.OrderComplete)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.OrderComplete)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Customer)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Customer.Name)
+        </dd>
+        @* <dt class = "col-sm-2">
+                @Html.DisplayNameFor(model => model.DriverCodeNavigation)
+            </dt>
+            <dd class = "col-sm-10">
+                @Html.DisplayFor(model => model.DriverCodeNavigation.DriverCode)
+            </dd>
+        </dl>*@
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.OrderId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
